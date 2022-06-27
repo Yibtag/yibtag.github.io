@@ -1,0 +1,77 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: Roboto, sans-serif;
+    overflow: hidden;
+}
+
+a {
+    color: rgb(75, 75, 75);
+    text-decoration: none;
+}
+
+a:hover {
+    color: rgb(104, 104, 104);
+}
+
+.header-1 {
+    height: 62rem;
+    text-indent: -9999rem;
+    background-image: url("./background.png");
+    background-size: 100%;
+}
+
+.textbox-1 {
+    width: 40rem;
+    height: 20rem;
+    margin-top: -46rem;
+    margin-left: 38.5rem;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 20px;
+    border:1px solid rgba(255, 255, 255, 0.18);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+}
+
+.textbox-content-1 {
+    margin-top: 2rem;
+    margin-left: 14rem;
+    font-size: 2rem;
+}
+
+.icon {
+    width: 8rem;
+    height: 8rem;
+    margin-left: 16.5rem;
+    margin-top: 3rem;
+}
+
+.footer {
+    height: 12.75rem;
+    margin-top: 12.6rem;
+    display: flex;
+    align-items: center;
+    border-radius: 12px;
+    justify-content: space-evenly;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 20px;
+    border:1px solid rgba(255, 255, 255, 0.18);
+}
+
+.footer a {
+    padding: 1.5rem;
+    border-radius: 12px;
+    color: black;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 20px;
+    border:1px solid rgba(255, 255, 255, 0.18);
+}
+
+.footer a:hover {
+    color: rgb(39, 39, 39);
+}
