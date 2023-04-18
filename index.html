@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Yibtag</title>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="icon" href="/assets/icon.ico">
+    <link rel="stylesheet" href="styles.css">
+
+    <script defer src="app.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</head>
+<body>
+    <section id="home">
+        <div class="home-images">
+            <img src="/assets/icon.png" alt="icon" class="icon">
+            <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" class="home-blob">
+                <path fill="#FFD6E8" d="M27.4,-45.2C37.7,-41.5,49.8,-38.6,59.4,-31.2C69,-23.8,76.1,-11.9,76.6,0.3C77.1,12.5,70.9,24.9,60.2,30.5C49.6,36.1,34.4,34.7,23.7,42.1C12.9,49.4,6.4,65.5,-0.1,65.6C-6.5,65.7,-13.1,49.8,-25.2,43.2C-37.3,36.7,-55,39.3,-62.1,33.7C-69.2,28,-65.6,14,-64,0.9C-62.4,-12.2,-62.9,-24.4,-57.7,-33.3C-52.5,-42.2,-41.6,-47.7,-31.1,-51.3C-20.5,-54.9,-10.3,-56.5,-0.9,-55C8.5,-53.5,17.1,-48.9,27.4,-45.2Z" transform="translate(100 100)" />
+            </svg>
+        </div>
+        <div class="home-nav">
+            <div class="home-buttons">
+                <a class="home-button home-github" href="https://github.com/Yibtag">
+                    <div class="home-button-image">
+                        <ion-icon name="logo-github"></ion-icon>
+                    </div>
+                    Github
+                </a>
+                <a class="home-button home-yibtag" href="https://www.youtube.com/channel/UC1hwcGldwEfU4Fr-TCIjK2g">
+                    <div class="home-button-image">
+                        <ion-icon name="logo-youtube"></ion-icon>
+                    </div>
+                    Youtube
+                </a>
+                <a class="home-button home-twitter" href="https://twitter.com/yibtag">
+                    <div class="home-button-image">
+                        <ion-icon name="logo-twitter"></ion-icon>
+                    </div>
+                    Twitter
+                </a>
+                <a class="home-button home-discord" href="https://discord.gg/CCmhueh3YU">
+                    <div class="home-button-image">
+                        <ion-icon name="logo-discord"></ion-icon>
+                    </div>
+                    Discord
+                </a>
+            </div>
+            <a href="#skills">
+                <ion-icon name="arrow-down-outline" class="arrow-icon arrow-home"></ion-icon>
+            </a>
+        </div>
+    </section>
+    <section id="skills">
+        <h2 class="skills-title">
+            Skills
+        </h2>
+        <div id="cards">
+            <div class="card">
+              <div class="card-content">
+                <div class="card-container">
+                    <ion-icon name="analytics-outline" class="card-icon"></ion-icon>
+                    <p class="card-text">Experienced in SQL and NON-SQL databases.</p>
+                </div>
+              </div>
+            </div>
+            <div class="card">
+                <div class="card-content">
+                    <div class="card-container">
+                        <ion-icon name="hardware-chip-outline" class="card-icon"></ion-icon>
+                        <p class="card-text">Extense knowlage of C and C++ for the most performant applications.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-content">
+                    <div class="card-container">
+                        <ion-icon name="logo-windows" class="card-icon"></ion-icon>
+                        <p class="card-text">Get more out of Windows applications with a great understanding of the Windows Api and .NET .</p>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-content">
+                    <div class="card-container">
+                        <ion-icon name="logo-android" class="card-icon"></ion-icon>
+                        <p class="card-text">Native Android applications using Java or Kotlin.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-content">
+                    <div class="card-container">
+                        <ion-icon name="logo-javascript" class="card-icon"></ion-icon>
+                        <p class="card-text">Web applications using React and Next JS.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-content">
+                    <div class="card-container">
+                        <ion-icon name="logo-python" class="card-icon"></ion-icon>
+                        <p class="card-text">Server scripts using Python.</p>
+                    </div>
+                </div>
+            </div>
+        </div> 
+        <a href="#projects">
+            <ion-icon name="arrow-down-outline" class="arrow-icon"></ion-icon>
+        </a>
+    </section>
+    <section id="projects">
+        <div class="screen">
+            <div class="screen-image"></div>
+            <div class="screen-overlay"></div>
+            <div class="screen-content">
+                <div class="screen-header">
+                    <ion-icon name="code-outline" class="screen-icon"></ion-icon>
+                    <h2 class="screen-title">Projects</h2>
+                </div>
+                <p class="screen-text">
+                    Projects with MIT or GPL lisences for a better open source feature. With the focus on the usability and distribution.
+                </p>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

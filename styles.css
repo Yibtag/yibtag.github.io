@@ -1,0 +1,379 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+:root {
+    --bg-color: rgb(20, 20, 20);
+    --card-color: rgb(23, 23, 23);
+}
+
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    text-decoration: none;
+    scroll-behavior: smooth;
+    font-family: 'Open Sans', sans-serif;
+}
+
+body {
+    overflow-x: hidden;
+    
+    background-color: var(--bg-color);
+}
+
+section {
+    width: 100vw;
+    height: 100vh;
+
+    display: grid;
+    place-items: center;
+}
+
+img {
+    width: 100%;
+}
+
+.home-images {
+    display: grid;
+    place-items: center;
+}
+
+.icon {
+    max-width: 512px;
+    width: calc(100% - 20px);
+
+    position: absolute;
+    z-index: 1;
+
+    filter: drop-shadow(8px 8px 8px #b577b8);
+}
+
+.home-blob {
+    max-width: 512px;
+    width: calc(100% - 20px);
+
+    position: absolute;
+    z-index:0;
+    animation: 8s rotate infinite ease-out;
+    filter: drop-shadow(0px 0px 8px #df9ae2);
+}
+
+.home-nav {
+    display: grid;
+    place-items: center;
+}
+
+.arrow-icon {
+    width: 4rem;
+    height: 4rem;
+
+    color: white;
+}
+
+.arrow-home {
+    position: absolute;
+    top: 90vh;
+    left: calc(50vw - 2rem);
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    } to {
+        transform: rotate(360deg);
+    }
+}
+
+.home-buttons {
+    max-width: 512px;
+    width: calc(100vw - 20px);
+
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.home-button {
+    width: 7rem;
+    padding: 7px 0px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+
+    color: white;
+    border-radius: 25px;
+    border: 1px solid white;
+}
+
+.home-button:hover {
+    animation: buttonjump 0.3s forwards;
+}
+
+@keyframes buttonjump {
+    from {
+        transform: translateY(0%);
+    } to {
+        transform: translateY(-10%);
+    }
+}
+
+.home-button-image {
+    width: 1rem;
+    height: 1rem;
+}
+
+.home-github {
+    color: #fa7970;
+    border: 1px solid #fa7970;
+    box-shadow: #fa797070 0px 0px 15px;
+}
+
+.home-yibtag {
+    color: red;
+    border: 1px solid red;
+    box-shadow: rgba(255, 0, 0, 0.952) 0px 0px 15px;
+}
+
+.home-twitter {
+    color: #1DA1F2;
+    border: 1px solid #1DA1F2;
+    box-shadow: #1da0f2c9 0px 0px 15px;
+}
+
+.home-discord {
+    color: #5865F2;
+    border: 1px solid #5865F2;
+    box-shadow: #5865f2ec 0px 0px 15px;
+}
+
+#skills {
+    background-image: radial-gradient(rgb(49, 49, 49), 3px, transparent 3px);
+    background-size: 50px 50px;
+}
+
+#cards {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 8px;  
+    max-width: 1200px;
+    width: calc(100% - 20px);
+}
+  
+#cards:hover > .card::after {
+    opacity: 1;
+}
+  
+.card {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    cursor: pointer;
+    display: flex;
+    height: 260px;
+    flex-direction: column;
+    position: relative;
+    width: 300px;  
+}
+  
+.card:hover::before {
+    opacity: 1;
+}
+  
+.card::before,
+.card::after {
+    border-radius: inherit;
+    content: "";
+    height: 100%;
+    left: 0px;
+    opacity: 0;
+    position: absolute;
+    top: 0px;
+    transition: opacity 500ms;
+    width: 100%;
+}
+  
+.card::before {
+    background: radial-gradient(
+      800px circle at var(--mouse-x) var(--mouse-y), 
+      rgba(255, 255, 255, 0.06),
+      transparent 40%
+    );
+    z-index: 3;
+}
+  
+.card::after {  
+    background: radial-gradient(
+      600px circle at var(--mouse-x) var(--mouse-y), 
+      rgba(255, 255, 255, 0.4),
+      transparent 40%
+    );
+    z-index: 1;
+}
+  
+.card > .card-content {
+    background-color: var(--card-color);
+    border-radius: inherit;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    flex-grow: 1;
+    inset: 1px;
+    padding: 10px;
+    position: absolute;
+    z-index: 2;
+}
+
+.skills-title {
+    max-width: 1200px;
+    width: calc(100% - 20px);
+
+    color: white;
+    font-size: 4rem;
+    filter: drop-shadow(0px 0px 3px white);
+}
+
+.card-container {
+    display: grid;
+    place-items: center;
+}
+
+.card-text {
+    font-size: 1.4rem;
+    
+    color: rgb(224, 224, 224);
+    text-shadow: 2px 2px 8px #ffffff83;
+}
+
+.card-icon {
+    width: 6rem;
+    height: 6rem;
+
+    color: rgb(214, 214, 214);
+    filter: drop-shadow(3px 4px 3px #a3a3a3ab);
+}
+
+@media screen and (max-width: 512px) {
+    .home-buttons {
+        display: grid;
+    }
+
+    .home-button {
+        margin-top: 1rem;
+    }
+}
+
+@media screen and (max-width: 626px) {
+    .card {
+        width: 35vw;
+        height: 20vh;
+    }
+
+    .card-text {
+        font-size: 0.6rem;
+    }
+}
+
+.screen {
+    max-width: 500px;
+    width: calc(100% - 20px);
+
+    aspect-ratio: 10 / 16;
+    position: relative;
+    overflow: hidden;
+
+    display: grid;
+    place-items: center;
+
+    border-radius: 25px;
+    border: 1px solid rgb(81, 116, 81);
+}
+
+.screen-overlay {
+    width: 100%;
+    height: 100%;
+
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    left: 0;
+
+    background-image: linear-gradient(
+        rgb(98, 141, 98),
+        rgba(81, 116, 81, 0.315) 3px,
+        transparent 3px,
+        transparent 3px
+    );
+    background-size: 100% 12px;
+
+    animation: pan-overlay 22s infinite linear;
+}
+
+@keyframes pan-overlay {
+    from {
+        background-position: 0% 0%;
+    } to {
+        background-position: 0% -100%;
+    }
+}
+
+.screen > .screen-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+    position: absolute;
+
+    filter: sepia(100%) hue-rotate(70deg);
+    opacity: 0.6;
+    background-image: url(/assets/screen.png);
+    background-size: 400%;
+    animation: pan-image 15s infinite;
+}
+
+.screen-content {
+    width: calc(100% - 20px);
+    height: calc(100% - 20px);
+
+    z-index: 3;
+
+    display: grid;
+    place-items: center;
+
+    border-radius: inherit;
+    border: 2px solid rgb(81, 116, 81);
+}
+
+.screen-header {
+    display: grid;
+    place-items: center;
+}
+
+.screen-icon {
+    width: 6rem;
+    height: 6rem;
+
+    color: rgb(160, 228, 160);
+    filter: drop-shadow(1px 1px 50px rgb(105, 148, 105));
+}
+
+.screen-title {
+    font-size: 1.7rem;
+    color: rgb(160, 228, 160);
+    text-shadow: 2px 2px 8px rgb(160, 228, 160);
+}
+
+.screen-text {
+    width: 40%;
+    color: rgb(160, 228, 160);
+    text-shadow: 2px 2px 8px rgb(160, 228, 160);
+}
+
+@keyframes pan-image {
+    from {
+        background-position: 0% 0%;
+    } to {
+        background-position: 100% 100%;
+    }
+}
